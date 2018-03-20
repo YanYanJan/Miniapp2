@@ -121,7 +121,7 @@ public class RecipeAdapter extends BaseAdapter {
                 builder.setStyle(new Notification.BigTextStyle(builder)
                         .bigText(instructions)
                         .setBigContentTitle("Cooking instruction")
-                        .setSummaryText("Big summary"))
+                        .setSummaryText(recipe.description))
                         .setContentTitle("Title")
                         .setContentText("Summary")
                         .setSmallIcon(android.R.drawable.sym_def_app_icon);
