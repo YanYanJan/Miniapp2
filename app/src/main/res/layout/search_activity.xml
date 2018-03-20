@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/diet_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/DietRes" />
+
+    <TextView
+        android:id="@+id/serving_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/diet_res"
+        android:layout_below="@+id/diet_res"
+        android:layout_marginTop="93dp"
+        android:text="@string/SerRes" />
+
+    <TextView
+        android:id="@+id/prep_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/serving_res"
+        android:layout_below="@+id/serving_res"
+        android:layout_marginTop="104dp"
+        android:text="@string/prep" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="102dp"
+        android:layout_toEndOf="@+id/prep_time"
+        android:text="@string/search" />
+
+    <Spinner
+        android:id="@+id/diet_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/diet_res"
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/Search"
+        android:spinnerMode="dropdown"/>
+
+    <Spinner
+        android:id="@+id/serving_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/diet_select"
+        android:layout_alignTop="@+id/serving_res"
+        android:spinnerMode="dropdown"/>
+
+    <Spinner
+        android:id="@+id/time_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/serving_select"
+        android:layout_alignTop="@+id/prep_time"
+        android:spinnerMode="dropdown"/>
+
+</RelativeLayout>

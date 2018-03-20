@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">What to cook?</string>
+    <string name="start">Start Cooking</string>
+    <string name="result">Found recipes</string>
+    <string name="thumb_nail">Food</string>
+    <string name="recipe_name">name</string>
+    <string name="serving">Servings</string>
+    <string name="DietRes">Diet Restriction</string>
+    <string name="SerRes">Serving Restriction</string>
+    <string name="prep">Preparation Time</string>
+    <string name="search">Search</string>
+
+
+</resources>
