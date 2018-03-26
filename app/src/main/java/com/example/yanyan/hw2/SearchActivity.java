@@ -38,18 +38,28 @@ public class SearchActivity extends AppCompatActivity {
 
         final ArrayList<Recipe> recipeList = Recipe.getRecipesFromFile("recipes.json", this);
         ArrayList<String> dietlabel = new ArrayList<String>();
+        ArrayList<String> servinglabel = new ArrayList<String>();
+        ArrayList<String> timelabel = new ArrayList<String>();
         dietlabel.add("No restriction");
-        String[] servinglabel = new String[]{"No restriction","less than 4", "4-6", "7-9", "more than 10"};
-        String[] timelabel = new String[]{"No restriction","30 minutes or less", "less than 1 hour", "more than 1 hour"};
+        servinglabel.add("No restriction");
+        timelabel.add("No restriction");
+        timelabel.add("30 minutes or less");
 
         for (int i = 0; i < recipeList.size(); i++){
             String diet =recipeList.get(i).label;
-            if (dietlabel.contains(diet)){
-            }
-            else{
+            String serving = recipeList.get(i).serving_label;
+            String time =recipeList.get(i).preptime_label;
+            if (!dietlabel.contains(diet)){
                 dietlabel.add(diet);
             }
+            if (!servinglabel.contains(serving)){
+                servinglabel.add(serving);
+            }
+            if (!timelabel.contains(time)){
+                timelabel.add(time);
+            }
         }
+        servinglabel.add("less than 4");
 
         ArrayAdapter<String> dietadpter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, dietlabel);
         ArrayAdapter<String> servingadpter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, servinglabel);
